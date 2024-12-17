@@ -71,4 +71,4 @@ values = [-1, -7, 7, -4, 19, 6, -9, -5, -2, -5]
 pos = 6
 head = create_linked_list_with_cycle(values, pos)
 solution = Solution()
-solution.detectCycle(head)
+print(solution.detectCycle(head))
