@@ -64,4 +64,12 @@ image input(see, OCR ask about)
 
 see the transcript to see whether the value and words are correct
 
- 
+###  Memory
+
+You can ask Chatgpt to remember, forget, change memory
+
+
+
+### Custom GPT
+
+prompt your own GPT
