@@ -2,7 +2,7 @@
 
 [official doc](https://docs.alliancecan.ca/wiki/Running_jobs)
 
-sbatch.sh file to set `I will put it in my github`
+`sbatch try.sh` file to set `I will put it in my github`
 
 `$ squeue -u l78gao`
 
@@ -10,7 +10,7 @@ Check your job status`$ squeue -j jobid`
 
 Check your user status `$ squeue | grep l78gao`
 
-cancel your job `$ scance jobid`
+cancel your job `$ scancel jobid`
 
 # Use GPU in compute Canada
 
