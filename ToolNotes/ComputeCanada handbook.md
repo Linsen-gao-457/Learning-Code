@@ -48,6 +48,19 @@ activate Env `source ~/A2/bin/activate`
 
 
 
+
+
+# Create virtual environment
+
+```OS
+module spider python
+module load python/3.6                        # load the version of your choice
+virtualenv --no-download ~/ENV
+source ~/ENV/bin/activate
+pip install --no-index --upgrade pip          # You should also upgrade pip
+pip install --no-index --upgrade setuptools 
+```
+
 # Use jupyter notebook
 
 Allocate GPU resource`salloc --mem=16G --cpus-per-task=2 --time=3:00:00 --gres=gpu:v100l:1`
@@ -100,3 +113,15 @@ conda install -c conda-forge OpenCV
 conda install -c conda-forge gcc
 conda install pytorch==2.5.1 torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
  pip install vllm 
+
+
+
+# Clean Storage
+
+```OS
+quota -s
+m -rf ~/.cache/* ~/.local/share/Trash/* ~/.npm/_cacache/*
+conda clean --all --yes 2>/dev/null
+go to the home to clean the files
+```
+
