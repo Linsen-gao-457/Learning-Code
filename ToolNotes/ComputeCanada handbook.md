@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # Use Slurm in computecanada
 
 [official doc](https://docs.alliancecan.ca/wiki/Running_jobs)
@@ -12,7 +16,35 @@ Check your user status `$ squeue | grep l78gao`
 
 cancel your job `$ scancel jobid`
 
-# Use GPU in compute Canada
+show only running jobs, or only pending jobs
+
+```
+$ squeue -u l78gao -t RUNNING
+$ squeue -u l78gao -t PENDING
+```
+
+different job have different section
+
+- 3 hours or less,
+- 12 hours or less,
+- 24 hours (1 day) or less,
+- 72 hours (3 days) or less,
+- 7 days or less, and
+- 28 days or less
+
+# Tips for Waterloo(Jimmy Lin)
+
+rrg-jimmy will get a preference over def-jimmylin
+
+```
+[name@server ~]$ export SLURM_ACCOUNT=def-jimmylin
+[name@server ~]$ export SBATCH_ACCOUNT=$SLURM_ACCOUNT
+[name@server ~]$ export SALLOC_ACCOUNT=$SLURM_ACCOUNT
+```
+
+
+
+# Allocate GPU resources in compute Canada
 
 Allocate GPU`srun --mem=128G --cpus-per-task=2 --time=3:00:00 --gres=gpu:v100l:1 --pty bash`
 
@@ -34,15 +66,17 @@ conda deactivate Env `conda deactivate`
 
 
 
-# Compute Canada virtual environment
+# Compute Canada command about module
 
-remove all module `module purge`
+remove all module `module --force purge`
 
 load module `load module xxx`
 
 check availability `module avail xxx`
 
 check how to load this module/ pre-load module requirement `module spider xxx`
+
+module list`module list`
 
 activate Env `source ~/A2/bin/activate`
 
@@ -90,8 +124,11 @@ open your webpage and open the link localhost: 8888. then you can use the canada
 
 
 
-# Pytorch/pyserini Evaluation environment setting
+# Environment setting
 
+## Pytorch/pyserini Evaluation 
+
+```
 module load StdEnv/2023
 module load gcc/12.3
 module load cuda/12.2
@@ -100,6 +137,9 @@ module load arrow
 pip install datasets
 module load java/21.0.1
 pip install pyserini
+```
+
+
 
 
 
