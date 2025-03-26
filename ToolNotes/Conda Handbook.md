@@ -5,7 +5,7 @@
 - [Create Env](#create-env)
 - [Rename/ copy a Conda Env](#rename-copy-a-conda-env)
 - [Finetune env setting](#finetune-env-setting)
-- [Build everything from scratch using anaconda](#build-everything-from-scratch-using-anaconda)
+- [Building everything from scratch using anaconda](#building-everything-from-scratch-using-anaconda)
   - [Step 1: unload all modules](#step-1-unload-all-modules)
   - [Step 2: install packages](#step-2-install-packages)
   - [Step 3: install your own Cuda](#step-3-install-your-own-cuda)
@@ -78,7 +78,7 @@ echo 'export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-# Build everything from scratch using anaconda
+# Building everything from scratch using anaconda
 
 This section will introduce how to set enviroment from scratch without depending on **ComputeCanada(CC)**:
 
