@@ -18,7 +18,7 @@ activate base env `source ~/miniconda3/bin/activate base`
 
 Conda create Env `conda create --prefix ~/conda_envs/finetune python=3.11 -y`
 
-Conda activate `Conda conda activate /home/l78gao/conda_envs/finetune`
+Conda activate `conda activate /home/l78gao/conda_envs/finetune`
 
 remove env `conda remove --name name_of_conda_env --all`
 
