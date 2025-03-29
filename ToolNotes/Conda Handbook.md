@@ -90,7 +90,7 @@ Unload all the module first, using `module --force purge` and use `module list` 
 
 ### Step 2: install packages
 
-For every package, you can use `pip install --no-cache-dir package_name` and use `pip show package_name` to check every package should be without any dependence on CC.
+For every package, you can use `pip install --no-cache-dir package_name` and use `pip show package_name` to check every package should be without any dependence on CC.`conda install -c conda-forge package name -y`
 
 ### Step 3: install your own Cuda
 
